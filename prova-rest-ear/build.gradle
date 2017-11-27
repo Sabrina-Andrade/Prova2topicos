@@ -1,0 +1,24 @@
+
+apply plugin: 'ear'
+
+dependencies {
+	deploy project(path: ':prova-rest-war', configuration: 'archives')
+	deploy project(path: ':prova-rest-ejb')
+	earlib project(':prova-rest-core')
+	earlib project(':prova-rest-api')
+	earlib project(':prova-rest-ejb-shopping')
+}
+
+ear {
+	deploymentDescriptor {
+		def warName = project(':prova-rest-war').name
+		def warVersion = project(':prova-rest-war').version
+		def warFileName = warName + '-' + warVersion + '.war'
+		webModule(warFileName, 'prova')
+
+		def ejbName = project(':prova-rest-ejb').name
+		def ejbVersion = project(':prova-rest-ejb').version
+		def ejbFileName = ejbName + '-' + ejbVersion + '.jar'
+		module(ejbFileName, 'ejb')
+	}
+}

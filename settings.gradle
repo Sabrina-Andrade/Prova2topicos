@@ -1,0 +1,1 @@
+include "prova-rest-api", "prova-rest-core", "prova-rest-ear", "prova-rest-war", "prova-rest-ejb", "prova-rest-ejb-shopping"

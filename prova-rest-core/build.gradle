@@ -1,0 +1,5 @@
+
+dependencies {
+	compile project(':prova-rest-api')
+	compile project(':prova-rest-ejb-shopping')
+}
