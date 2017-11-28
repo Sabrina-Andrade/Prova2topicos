@@ -1,9 +1,6 @@
 package br.edu.univas.si.war.app;
 
-import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Locale;
 import java.util.Set;
 
 import javax.ws.rs.ApplicationPath;

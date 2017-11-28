@@ -19,7 +19,7 @@ public class Pedidodao {
 	}
 
 	public List<Pedido> listAll() {
-		return em.createQuery("from pedido p", Pedido.class).getResultList();
+		return em.createQuery("from shopping_order s", Pedido.class).getResultList();
 	}
 
 	
